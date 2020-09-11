@@ -1,0 +1,71 @@
+doctype html
+html(lang="ru-RU")
+	head
+
+		include ../components/head
+
+	body
+
+		main(id="wrapper", class="page_home")
+
+			include ../components/header
+
+			section.folder
+				.container
+					.row
+						.col-24
+
+							.folder-slider
+
+								.folder-slide
+									.folder--photo
+										img(src="img/home/slide.png")
+										.folder-icon
+											img(class="folder-icon" src="img/home/icons/garantia.png")
+
+									.folder--info
+										h2.title-1 Ексклюзивні двері в будинок!
+										h3.title-3 Накладка <span>HPL</span>-панель
+										a(class="btn" href="catalog.html") В каталог
+
+								.folder-slide
+									.folder--photo
+										img(src="img/home/slide.png")
+										.folder-icon
+											img(class="folder-icon" src="img/home/icons/garantia.png")
+
+									.folder--info
+										h2.title-1 Ексклюзивні двері в будинок! 2
+										h3.title-3 Накладка <span>HPL</span>-панель 2
+										a(class="btn" href="catalog.html") В каталог
+
+								.folder-slide
+									.folder--photo
+										img(src="img/home/slide.png")
+										.folder-icon
+											img(class="folder-icon" src="img/home/icons/garantia.png")
+
+									.folder--info
+										h2.title-1 Ексклюзивні двері в будинок! 3
+										h3.title-3 Накладка <span>HPL</span>-панель 3
+										a(class="btn" href="catalog.html") В каталог
+
+
+
+
+
+							.folder-nav
+								.folder-nav-count
+									span.current 01
+									i
+									span.all 0
+								.folder-nav-arrow
+									button.btn-prev
+										img(src="img/icons/arrow-prev.svg")
+
+									button.btn-next
+										img(src="img/icons/arrow-next.svg")
+
+
+
+			include ../components/footer

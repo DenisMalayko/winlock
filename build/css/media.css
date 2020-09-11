@@ -1,0 +1,18 @@
+@media (max-width: 1024px) {
+  .header_button {
+    display: block; } }
+
+@media (max-width: 991px) {
+  .header_wrap_button {
+    transform: translate(0px, -50%) scale(0.75); } }
+
+@media (max-width: 767px) {
+  .container {
+    width: 98vw; }
+  .description-2 {
+    font-size: 4vw; }
+  .header-top-list {
+    padding: 2.3vw 0;
+    justify-content: center; }
+    .header-top-list li:not(:first-child) {
+      display: none; } }

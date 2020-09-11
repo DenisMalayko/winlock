@@ -1,0 +1,6 @@
+1. git init
+2. git clone ...
+3. git status
+4. git add *
+5. git commit -m "..."
+6. git push origin master
