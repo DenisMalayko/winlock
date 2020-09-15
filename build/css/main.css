@@ -1177,3 +1177,56 @@ ol {
     align-items: center; }
     .pagination-link.active {
       color: #E4801D; }
+
+.blog {
+  margin: 3.5vw 0; }
+  .blog-top {
+    margin-bottom: 3.5vw; }
+
+.post {
+  margin: 3.5vw 0 5vw; }
+  .post-top {
+    margin-bottom: 2vw; }
+  .post img {
+    width: 100%;
+    height: auto;
+    max-height: 34vw;
+    object-fit: cover; }
+  .post p {
+    font-size: 1.1vw;
+    letter-spacing: 0.06vw;
+    line-height: 1.4em;
+    margin: 2vw 0; }
+  .post blockquote {
+    background: #E4801D;
+    width: 66%;
+    margin: 0 auto;
+    color: white;
+    padding: 2vw; }
+    .post blockquote p {
+      margin: 0;
+      font-size: 1.7vw;
+      text-align: center;
+      letter-spacing: 0.1vw; }
+  .post-nav {
+    margin: 1.5vw 0;
+    display: flex;
+    justify-content: space-between; }
+    .post-nav svg {
+      width: 1.5vw; }
+    .post-nav span {
+      font-family: 'gilroy-bold';
+      font-size: 1.2vw;
+      letter-spacing: 0.08vw; }
+    .post-nav a {
+      display: flex; }
+      .post-nav a:hover {
+        color: #E4801D; }
+    .post-nav-prev svg {
+      margin-right: 1.9vw; }
+    .post-nav-prev:hover svg {
+      transform: translate(-10px, 0px); }
+    .post-nav-next svg {
+      margin-left: 1.9vw; }
+    .post-nav-next:hover svg {
+      transform: translate(10px, 0px); }
