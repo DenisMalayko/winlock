@@ -1,14 +1,34 @@
 @media(max-width: 1024px)
-	.header_button
-		display: block
+
+	.contact-section-map
+		margin-left: 8vw
 
 
 
 @media(max-width: 991px)
-	.header_wrap_button
-		transform: translate(0px, -50%) scale(0.75)
+
+	.about-section-left:before
+		left: -11vw
 
 @media(max-width: 767px)
+
+	.title-1
+		font-size: 11.1vw
+
+	.title-3
+		font-size: 6vw
+		letter-spacing: 0.23vw
+
+	.title-5
+		font-size: 4vw
+
+	.btn
+		font-size: 4.1vw
+		padding: 2vw 4vw
+		min-width: 36vw
+
+	#wrapper
+		padding-top: 43vw
 
 	.container
 		width: 98vw
@@ -16,9 +36,390 @@
 	.description-2
 		font-size: 4vw
 
+	.header
+		&.fixed
+			.header-top-list
+				p
+					font-size: 4vw
+			.header-support
+				padding: 2vw 0
+
+	.header-logo
+		margin: 1vw 0 0.5vw 1%
+
 	.header-top-list
 		padding: 2.3vw 0
 		justify-content: center
 		li:not(:first-child)
 			display: none
+
+	.header-nav
+		.row
+			justify-content: space-between
+			.col-md-13,
+			& > div:nth-child(2)
+				display: none
+
+	.header-actions
+		margin-left: 1vw
+		&-list
+			margin-left: 0.5vw
+		&-phone
+			display: none
+
+	.header-cart
+		width: 4.3vw
+
+	.header-language
+		margin-left: 4vw
+		margin-top: 8%
+		.link-1
+			font-size: 4vw
+
+	.header_wrap_button
+		z-index: 1
+		opacity: 1
+
+	.header-menu-list
+		display: none
+
+	.header-support
+		display: flex
+		align-items: center
+		justify-content: space-between
+		padding: 5vw 0
+		&-list
+			font-family: 'gilroy-bold'
+		a
+			font-size: 4vw
+			letter-spacing: 0.05vw
+
+
+	.folder-slide
+		height: 112.5vw !important
+
+	.folder--info
+		width: 100%
+		justify-content: flex-start
+		padding-top: 12.5vw
+		.title-1
+			margin-bottom: 4vw
+		.title-3
+			margin-bottom: 5vw
+			font-size: 5.5vw
+			letter-spacing: 0.2vw
+
+	.folder-nav
+		width: 95%
+		height: 16.5vw
+
+	.folder-nav-count
+		width: 36%
+		padding: 2vw 7vw
+		span
+			font-size: 4vw
+		i
+			width: 4.5vw
+
+	.folder-nav-arrow
+		width: 31%
+		padding: 2.2vw 6vw
+		button
+			width: 5vw
+			height: 3.5vw
+
+	.folder-icon
+		top: auto
+		bottom: 15%
+		width: 30vw
+		height: 34vw
+
+
+	.section
+		&-top
+			text-align: left
+			margin-bottom: 4vw
+			&-nav
+				display: flex
+		&-footer
+			margin-top: 15vw
+			.btn
+				min-width: 55vw
+				padding: 3.5vw 4vw
+
+
+	.warehouse
+		margin: 11vw 0
+		&-body
+			width: 160%
+			z-index: 1
+			.slick-list
+				overflow: visible
+			.slick-slide
+				outline: none
+		.section-top
+			.description-2
+				display: none
+
+
+
+	.product
+		&-title
+			font-size: 4.6vw
+		&-status
+			top: 9.5vw
+			right: 7.5vw
+			font-size: 3vw
+			padding: 0.9vw 2.2vw
+		&-price
+			width: 39vw
+			justify-content: space-between
+			margin: 5.5vw 0 4.5vw
+			font-size: 4.2vw
+			.old-price
+				margin-right: 0vw
+				font-size: 3.5vw
+				span
+					margin-left: 0.5vw
+			.current-price
+				padding-right: 1vw
+				letter-spacing: 0.3vw
+				span
+					margin-left: 1vw
+		&-colors
+			margin: 0vw 0 7vw
+			.label
+				margin-right: 2.5vw
+		&-color
+			width: 4.3vw
+			height: 4.3vw
+		&-photo-link
+			height: 102.5vw
+			padding: 21vw 16vw 5.5vw
+		&-item
+			height: 139vw
+			&-info
+				padding: 0 10% 5vw
+				.btn
+					min-width: 46vw
+			&-actions
+				top: 7vw
+				left: 6.5vw
+				& > *
+					width: 11vw
+					height: 10.5vw
+					svg
+						width: 4.5vw
+
+	.benefits
+		&-title
+			width: 70%
+			font-size: 4.25vw
+			letter-spacing: 0.2vw
+			line-height: 1.1em
+		&-info
+			align-items: center
+			.title-3
+				margin-bottom: 2.5vw
+			.description-2
+				text-align: center
+		&-list
+			margin-left: 0
+			flex-direction: column
+			margin-top: 4vw
+			li
+				width: 100% !important
+				margin-bottom: 6.5vw
+		&-icon
+			width: 17vw
+			height: 17vw
+			margin-bottom: 5vw
+			img
+				width: 8.3vw
+
+
+
+	.doors
+		margin-bottom: 11vw
+		&-info
+			padding: 15.5vw 0
+			& > *
+				display: none
+		&-list
+			display: block
+			li
+				margin-bottom: 2.6vw
+			a
+				padding: 2.3vw 6.6vw 2.3vw 7vw
+				font-size: 7.7vw
+				letter-spacing: 0.55vw
+				color: white
+				background: #E4801D
+		&-photo-info
+			display: none
+		.doors-photo
+			height: 124.5vw
+			position: absolute
+			bottom: 0%
+			z-index: -1
+			right: -2%
+			width: 77.5%
+			transform: translate(0px, 2%)
+
+	.blog
+		.section
+			&-top
+				display: flex
+				flex-direction: column
+				align-items: center
+				margin-bottom: 5vw
+				.title-3
+					margin-bottom: 3vw
+			&-footer
+				display: none
+		&-status
+			top: 4vw
+			left: 4vw
+			font-size: 3vw
+			padding: 1vw 2vw
+			min-width: 16vw
+		&-title
+			font-size: 4vw
+		&-item
+			width: 100%
+			margin-bottom: 3vw
+			&-photo
+				height: 68vw
+			&-info
+				padding: 4.5vw 0
+
+	.about-section
+		margin: 8.5vw 0
+		padding-top: 58vw
+		&-photo
+			height: 85vw
+		&-left
+			margin-top: 4.5vw
+			&:before
+				top: -1.7vw
+				height: 128%
+			.description
+				font-size: 4.6vw
+				width: 100%
+				line-height: 1.25em
+				margin-bottom: 5vw
+		&-right
+			margin-top: 15.7vw
+			.description-2
+				width: 100%
+				line-height: 1.2em
+				margin-bottom: 5.3vw
+			.btn
+				display: none
+		&-play
+			right: 13.7vw
+			bottom: 32.8vw
+			width: 37vw
+			height: 37vw
+			&-icon
+				width: 7.7vw
+
+	.about-title
+		font-size: 8vw
+		letter-spacing: 0.4vw
+
+
+	.about-section
+		margin-bottom: 3vw
+		.about-title:before
+			position: absolute
+			content: ''
+			left: -15px
+			bottom: -20%
+			width: 52%
+			height: 74%
+			background: #E4801D
+			z-index: -1
+
+
+	.contact-section
+		margin-top: 3vw
+		&-info
+			padding-top: 1.5vw
+			margin-bottom: 14vw
+			.title-3
+				margin-bottom: 3.5vw
+			.description-2
+				line-height: 1.2em
+		&--contacts
+			margin: 4vw 0 6vw
+			&-list
+				margin: 5vw 0
+				li
+					margin-bottom: 2.5vw
+		&--times
+			&-list
+				margin: 4.4vw 0
+				li
+					margin-bottom: 0.1vw
+			.btn
+				min-width: 50vw
+				padding: 3.5vw 4vw
+
+	.contact-link
+		font-size: 4.1vw
+
+
+	.contact-section-map
+		width: 110%
+		height: 73.5vw
+		transform: rotate(-13deg)
+		margin-left: 11vw
+		#map
+			transform: rotate(12deg) translate(-25%, 0px)
+			width: 130%
+
+	.contact-section-mask
+		top: -5vw
+		left: 12vw
+		height: 109%
+
+
+	.footer
+		padding: 17vw 0vw 9vw
+		&-logo
+			display: none
+		&-item
+			padding-left: 0.4vw
+			margin-bottom: 4.7vw
+			.title-5
+				font-size: 4.8vw
+				letter-spacing: 0.4vw
+			&-list
+				margin: 4.2vw 0 0 0
+				li
+					margin-bottom: 2.1vw
+		&-bottom
+			margin-top: 5.5vw
+			font-size: 3.4vw
+
+	.footer-item-list
+		display: none
+		&.active
+			display: block
+
+
+	//.contact-section-map
+	//	display: none
+
+
+
+
+
+
+
+
+
+
+
 
