@@ -14,6 +14,9 @@
     letter-spacing: 0.23vw; }
   .title-5 {
     font-size: 4vw; }
+  .link-1 {
+    font-size: 4vw;
+    letter-spacing: 0.06vw; }
   .btn {
     font-size: 4.1vw;
     padding: 2vw 4vw;
@@ -126,7 +129,7 @@
     font-size: 4.6vw; }
   .product-status {
     top: 9.5vw;
-    right: 7.5vw;
+    right: 7.5vw !important;
     font-size: 3vw;
     padding: 0.9vw 2.2vw; }
   .product-price {
@@ -152,22 +155,22 @@
     width: 4.3vw;
     height: 4.3vw; }
   .product-photo-link {
-    height: 102.5vw;
-    padding: 21vw 16vw 5.5vw; }
+    height: 102.5vw !important;
+    padding: 21vw 16vw 5.5vw !important; }
   .product-item {
-    height: 139vw; }
+    height: 139vw !important; }
     .product-item-info {
       padding: 0 10% 5vw; }
       .product-item-info .btn {
         min-width: 46vw; }
     .product-item-actions {
-      top: 7vw;
-      left: 6.5vw; }
+      top: 7vw !important;
+      left: 6.5vw !important; }
       .product-item-actions > * {
-        width: 11vw;
-        height: 10.5vw; }
+        width: 11vw !important;
+        height: 10.5vw !important; }
         .product-item-actions > * svg {
-          width: 4.5vw; }
+          width: 4.5vw !important; }
   .benefits-title {
     width: 70%;
     font-size: 4.25vw;
@@ -323,7 +326,7 @@
     left: 12vw;
     height: 109%; }
   .footer {
-    padding: 17vw 0vw 9vw; }
+    padding: 7vw 0vw 9vw; }
     .footer-logo {
       display: none; }
     .footer-item {
@@ -342,4 +345,89 @@
   .footer-item-list {
     display: none; }
     .footer-item-list.active {
-      display: block; } }
+      display: block; }
+  .breadcrumbs {
+    margin: 2.6vw 0; }
+    .breadcrumbs-list li {
+      position: relative;
+      margin-right: 7vw; }
+      .breadcrumbs-list li:before {
+        right: -4.5vw;
+        font-size: 4vw; }
+  .sidebar {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: -83%;
+    width: 83%;
+    height: 100vh;
+    z-index: 10;
+    background: white;
+    transition: all 0.5s ease; }
+    .sidebar.open {
+      left: 0;
+      z-index: 12; }
+    .sidebar:before {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 100%;
+      top: 0;
+      right: -100%;
+      background: rgba(0, 0, 0, 0.5);
+      display: none; }
+    .sidebar-top {
+      display: block;
+      background: #E4801D;
+      color: white;
+      padding: 5vw 1vw 5vw 8vw; }
+      .sidebar-top .sidebar-title {
+        font-size: 5vw;
+        letter-spacing: 0.45vw; }
+    .sidebar-title {
+      font-size: 4.5vw; }
+    .sidebar-body {
+      height: 77%;
+      overflow-x: hidden;
+      padding: 4vw; }
+    .sidebar-list {
+      margin-top: 6.5vw; }
+      .sidebar-list input[type="checkbox"],
+      .sidebar-list input[type="radio"] {
+        width: 6.6vw;
+        height: 6.6vw;
+        margin: 0 6.5vw 0 0; }
+    .sidebar-item {
+      width: 91%; }
+      .sidebar-item-top {
+        padding: 5.5vw 0; }
+        .sidebar-item-top:before {
+          right: 3.5%;
+          top: 8vw;
+          border: 2vw solid transparent;
+          border-top: 2vw solid #202020; }
+      .sidebar-item.open .sidebar-item-top:before {
+        border-top: 2vw solid #E4801D; }
+    .sidebar--item {
+      margin-bottom: 4.8vw; }
+    .sidebar-clear {
+      margin-top: 5vw; }
+      .sidebar-clear-icon {
+        width: 5.5vw; }
+  .catalog {
+    margin: 7vw 0 9vw; }
+    .catalog .title-3 {
+      text-align: center; }
+    .catalog-top {
+      margin-bottom: 2vw; }
+      .catalog-top-filter {
+        display: flex; }
+  .pagination {
+    margin-top: 2.5vw; }
+    .pagination-btn {
+      width: 5.8vw; }
+    .pagination-link {
+      font-size: 4vw; }
+    .pagination-list li {
+      width: 8vw;
+      height: 8vw; } }

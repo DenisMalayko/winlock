@@ -38,6 +38,15 @@ body
 		background-color: $orange
 	&.overflow
 		overflow: hidden
+		&:before
+			position: fixed
+			content: ''
+			width: 100%
+			height: 100vh
+			left: 0
+			top: 0
+			background: rgba(0,0,0,0.5)
+			z-index: 11
 
 svg,
 path,
@@ -98,6 +107,8 @@ ol
 	list-style: none
 	margin: 0px
 	padding: 0px
+	li
+		list-style: none
 
 #wrapper
 	padding-top: 18vw
@@ -320,6 +331,7 @@ $cubic-bezier-out: cubic-bezier(1,0.70,1,0.30)
 	width: 90%
 	margin: 1.75vw 0 1.7vw 1%
 	transition: all 0.5s ease
+	display: block
 
 .header-cart
 	display: flex
@@ -963,6 +975,7 @@ $cubic-bezier-out: cubic-bezier(1,0.70,1,0.30)
 		&-photo
 			position: relative
 		&-actions
+			display: flex
 			position: absolute
 			top: 2vw
 			left: 2.4vw
@@ -980,6 +993,7 @@ $cubic-bezier-out: cubic-bezier(1,0.70,1,0.30)
 				cursor: pointer
 				transition: all 0.4s ease
 				position: relative
+				margin-right: 0.7vw
 				&:hover
 					background: $orange
 					path
@@ -1046,6 +1060,184 @@ $cubic-bezier-out: cubic-bezier(1,0.70,1,0.30)
 				object-fit: cover
 		&-info
 			padding: 1.7vw 0
+
+
+.breadcrumbs
+	margin: 1.1vw 0
+	&-list
+		display: flex
+		flex-wrap: wrap
+		li
+			position: relative
+			margin-right: 2vw
+			&:before
+				position: absolute
+				content: '/'
+				right: -1.2vw
+				top: 50%
+				transform: translate(0, -50%)
+				color: black
+				font-size: 1.2vw
+			&:last-child
+				&:before
+					display: none
+				.link-1,
+				span
+					font-family: 'gilroy-bold'
+					pointer-events: none
+
+
+.catalog
+	margin: 3.5vw 0 16vw
+	&-top
+		margin-bottom: 2vw
+		&-filter
+			display: none
+			justify-content: center
+			margin: 3vw 0
+			&-icon
+				margin-right: 1vw
+				width: 4vw
+			&-title
+				font-family: 'gilroy-bold'
+				font-size: 4vw
+	&-list
+		margin-top: 0.7vw
+		& > div
+			padding-right: 15px
+			padding-left: 15px
+		.product-item
+			height: 38.5vw
+		.product-status
+			right: 1vw
+		.product-photo-link
+			height: 26vw
+			padding: 6vw 5vw 1.5vw
+		.product-item-actions
+			top: 2.6vw
+			left: 1.1vw
+			& > *
+				width: 2.2vw
+				height: 2.2vw
+				svg
+					width: 0.9vw
+
+
+.sidebar
+	width: 96%
+	&-top
+		display: none
+	&-title
+		font-size: 1.2vw
+		font-family: 'gilroy-bold'
+		letter-spacing: 0.07vw
+		cursor: pointer
+	&-item
+		border-bottom: 1px solid $black
+		&.open
+			border-color: $orange
+			.sidebar-title
+				color: $orange
+			.sidebar-list
+				display: block
+			.sidebar-item-top
+				&:before
+					border-top: 0.4vw solid $orange
+					transform: rotate(-90deg)
+		&-top
+			padding: 1.5vw 0
+			position: relative
+			&:before
+				position: absolute
+				content: ''
+				right: 5%
+				top: 2vw
+				border: 0.4vw solid transparent
+				border-top: 0.4vw solid #202020
+				transition: all 0.3s ease
+	&--item
+		display: flex
+		align-items: center
+		cursor: pointer
+		margin-bottom: 1.25vw
+		&:last-child
+			margin-bottom: 0
+		sup
+			color: #BBBBBB
+	&-list
+		margin-top: 1.6vw
+		display: none
+		input[type="checkbox"],
+		input[type="radio"]
+			appearance: none
+			-webkit-appearance: none
+			width: 1.6vw
+			height: 1.6vw
+			border: 2px solid $orange
+			margin: 0 1.7vw 0 0
+			position: relative
+			border-radius: 0 !important
+			&:before
+				position: absolute
+				content: ''
+				width: 100%
+				height: 100%
+				left: 50%
+				top: 50%
+				transform: translate(-50%, -50%) scale(.5)
+				opacity: 0
+				background: $orange
+				transition: all 0.5s ease
+			&:checked
+				&:before
+					transform: translate(-50%, -50%) scale(1.1)
+					opacity: 1
+					transition: all 0.5s ease
+	&-clear
+		display: flex
+		justify-content: center
+		position: relative
+		align-items: center
+		margin-top: 1.5vw
+		&-icon
+			width: 1.5vw
+			margin-left: 0.5vw
+			transform: translate(32%, 3%)
+
+.pagination
+	display: flex
+	justify-content: center
+	width: 100%
+	&-btn
+		width: 1.8vw
+		height: 100%
+		display: flex
+		justify-content: center
+		align-items: center
+		&.pagination-btn-next
+			margin: auto 0 auto auto
+	&-list
+		display: flex
+		li
+			width: 2.8vw
+			height: 2.8vw
+			&:hover
+				.pagination-link
+					color: $orange
+				.pagination-btn path
+					fill: $orange
+	&-link
+		font-family: 'gilroy-bold'
+		font-size: 1.2vw
+		height: 100%
+		width: 100%
+		display: flex
+		justify-content: center
+		align-items: center
+		&.active
+			color: $orange
+
+
 
 
 

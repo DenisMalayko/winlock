@@ -1,3 +1,6 @@
+$black: #202020
+$orange: #E4801D
+
 @media(max-width: 1024px)
 
 	.contact-section-map
@@ -21,6 +24,10 @@
 
 	.title-5
 		font-size: 4vw
+
+	.link-1
+		font-size: 4vw
+		letter-spacing: 0.06vw
 
 	.btn
 		font-size: 4.1vw
@@ -168,7 +175,7 @@
 			font-size: 4.6vw
 		&-status
 			top: 9.5vw
-			right: 7.5vw
+			right: 7.5vw !important
 			font-size: 3vw
 			padding: 0.9vw 2.2vw
 		&-price
@@ -194,22 +201,22 @@
 			width: 4.3vw
 			height: 4.3vw
 		&-photo-link
-			height: 102.5vw
-			padding: 21vw 16vw 5.5vw
+			height: 102.5vw !important
+			padding: 21vw 16vw 5.5vw !important
 		&-item
-			height: 139vw
+			height: 139vw !important
 			&-info
 				padding: 0 10% 5vw
 				.btn
 					min-width: 46vw
 			&-actions
-				top: 7vw
-				left: 6.5vw
+				top: 7vw !important
+				left: 6.5vw !important
 				& > *
-					width: 11vw
-					height: 10.5vw
+					width: 11vw !important
+					height: 10.5vw !important
 					svg
-						width: 4.5vw
+						width: 4.5vw !important
 
 	.benefits
 		&-title
@@ -386,7 +393,7 @@
 
 
 	.footer
-		padding: 17vw 0vw 9vw
+		padding: 7vw 0vw 9vw
 		&-logo
 			display: none
 		&-item
@@ -408,10 +415,97 @@
 		&.active
 			display: block
 
+	.breadcrumbs
+		margin: 2.6vw 0
+		&-list li
+			position: relative
+			margin-right: 7vw
+			&:before
+				right: -4.5vw
+				font-size: 4vw
 
-	//.contact-section-map
-	//	display: none
+	.sidebar
+		display: block
+		position: fixed
+		top: 0
+		left: -83%
+		width: 83%
+		height: 100vh
+		z-index: 10
+		background: white
+		transition: all 0.5s ease
+		&.open
+			left: 0
+			z-index: 12
+		&:before
+			position: absolute
+			content: ''
+			width: 100%
+			height: 100%
+			top: 0
+			right: -100%
+			background: rgba(0,0,0,0.5)
+			display: none
+		&-top
+			display: block
+			background: $orange
+			color: white
+			padding: 5vw 1vw 5vw 8vw
+			.sidebar-title
+				font-size: 5vw
+				letter-spacing: 0.45vw
+		&-title
+			font-size: 4.5vw
+		&-body
+			height: 77%
+			overflow-x: hidden
+			padding: 4vw
+		&-list
+			margin-top: 6.5vw
+			input[type="checkbox"],
+			input[type="radio"]
+				width: 6.6vw
+				height: 6.6vw
+				margin: 0 6.5vw 0 0
+		&-item
+			width: 91%
+			&-top
+				padding: 5.5vw 0
+				&:before
+					right: 3.5%
+					top: 8vw
+					border: 2vw solid transparent
+					border-top: 2vw solid #202020
+			&.open
+				.sidebar-item-top:before
+					border-top: 2vw solid #E4801D
+		&--item
+			margin-bottom: 4.8vw
+		&-clear
+			margin-top: 5vw
+			&-icon
+				width: 5.5vw
 
+
+	.catalog
+		margin: 7vw 0 9vw
+		.title-3
+			text-align: center
+		&-top
+			margin-bottom: 2vw
+			&-filter
+				display: flex
+
+	.pagination
+		margin-top: 2.5vw
+		&-btn
+			width: 5.8vw
+		&-link
+			font-size: 4vw
+		&-list
+			li
+				width: 8vw
+				height: 8vw
 
 
 
