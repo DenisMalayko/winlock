@@ -12,6 +12,8 @@
   .title-3 {
     font-size: 6vw;
     letter-spacing: 0.23vw; }
+  .title-4 {
+    font-size: 5vw; }
   .title-5 {
     font-size: 4vw; }
   .link-1 {
@@ -456,4 +458,49 @@
     .post-nav svg {
       width: 6.5vw; }
     .post-nav span {
-      font-size: 4vw; } }
+      font-size: 4vw; }
+  .about {
+    margin: 7vw 0 9vw; }
+    .about-top {
+      margin-bottom: 7vw; }
+    .about-photo {
+      height: 50vw;
+      width: 100%;
+      margin-bottom: 5vw; }
+    .about-welcome-info {
+      width: 100%; }
+    .about-welcome-photo {
+      height: 50vw;
+      margin-bottom: 4vw; }
+      .about-welcome-photo-info {
+        width: 79%;
+        padding: 2.7vw 3vw 2.2vw; }
+  .contact {
+    margin-bottom: 22vw; }
+    .contact-item {
+      width: 100% !important;
+      margin-bottom: 5vw !important; }
+      .contact-item:last-child {
+        margin-bottom: 0 !important; }
+      .contact-item-list {
+        margin-top: 2vw; }
+    .contact--body {
+      width: 100%;
+      margin: 5vw 0; }
+    .contact-info {
+      padding: 7vw 7vw 1vw; }
+    .contact-form {
+      width: 100%; }
+      .contact-form-wrap {
+        margin-bottom: 15vw; }
+    .contact-error {
+      padding: 2.5vw 1.7vw;
+      font-size: 4vw; }
+  .form-label {
+    margin-bottom: 5vw; }
+    .form-label input,
+    .form-label textarea {
+      font-size: 4vw;
+      padding: 2vw 0; }
+    .form-label textarea {
+      height: 20vw; } }

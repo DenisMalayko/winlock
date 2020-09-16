@@ -37,6 +37,18 @@ var header = {
 
 $(document).ready(function(){
 
+
+	// Удалить
+	$("#product-empty").on('click', function(){
+		alert('+')
+		$('.favorite').toggleClass('has-products')
+	});
+
+	$('#cart-empty').on('click', function(){
+		$('.cart').toggleClass('has-products')
+	});
+
+
 	// Header
 	// -------------------------------------- //
 	header.fadeUp();
@@ -71,6 +83,28 @@ $(document).ready(function(){
 	$('.footer-item-top').on('click', function(){
 		$('.footer-item-list').not($(this).next()).removeClass('active');
 		$(this).next().toggleClass('active');
+	});
+
+	// Маска на номер телефону
+	//--------------//
+	$("input[type='tel']").mask("+38 999 999 99 99")
+	//--------------//
+
+
+
+	$('.header-cart').on('click', function (event) {
+		event.preventDefault()
+		$('body').addClass('overflow')
+		$('.cart').addClass('open')
+	})
+
+	$(document).mouseup(function (e){
+		var block = $(".cart");
+		if (!block.is(e.target)
+			&& block.has(e.target).length === 0) {
+			block.removeClass('open');
+			$('body').removeClass('overflow')
+		}
 	});
 
 
@@ -187,10 +221,18 @@ $(document).ready(function(){
 			$('.sidebar-clear').click(function () {
 				$('.sidebar input').prop('checked', false);
 			});
-
-
-
 		break;
+
+		case 'page_contact':
+		break;
+
+		case 'page_favorite':
+			$("#product-empty").on('click', function(){
+				$('.favorite').toggleClass('has-products')
+			});
+			
+		break;
+
 	}
 });
 
@@ -207,7 +249,7 @@ var map, infoWindow, markersData = [{
 function initMap() {
 	var e = {
 		center: new google.maps.LatLng(48.323039, 25.913981),
-		zoom: 15,
+		zoom: 14,
 		styles: [
 			{
 				"elementType": "geometry",

@@ -66,7 +66,7 @@ a
 	transition: all 0.4s ease
 	outline: none
 	cursor: pointer
-	color: black
+	color: $black
 
 button
 	border: none
@@ -81,14 +81,15 @@ textarea
 	background: rgba(0,0,0,0)
 	border: none
 	outline: none
+	font-family: 'gilroy'
 	&::-webkit-input-placeholder
-		color: #000
+		color: $black
 	&::-moz-placeholder
-		color: #000
+		color: $black
 	&:-moz-placeholder
-		color: #000
+		color: $black
 	&:-ms-input-placeholder
-		color: #000
+		color: $black
 
 h1,
 h2,
@@ -160,6 +161,7 @@ ol
 	width: max-content
 	display: flex
 	justify-content: center
+	align-items: center
 	background: #F99C41
 	color: white
 	font-family: 'gilroy-bold'
@@ -340,6 +342,33 @@ $cubic-bezier-out: cubic-bezier(1,0.70,1,0.30)
 		svg path
 			fill: $black
 
+
+.header-favorite
+	display: flex
+	width: 1.1vw
+	&:hover
+		svg path
+			fill: $black
+		.header-count
+			background: $black
+			color: white
+
+.header-count
+	background: white
+	color: #202020
+	font-family: 'gilroy-bold'
+	position: absolute
+	right: -0.7vw
+	top: -0.7vw
+	width: 1.1vw
+	height: 1.1vw
+	display: flex
+	align-items: center
+	justify-content: center
+	border-radius: 50%
+	font-size: 0.8vw
+	transition: all 0.3s ease
+
 .header-top
 	background: $black
 
@@ -369,10 +398,10 @@ $cubic-bezier-out: cubic-bezier(1,0.70,1,0.30)
 .header-actions
 	position: relative
 	height: 100%
-	width: 140%
+	width: 150%
 	display: flex
 	align-items: center
-	margin-left: 2vw
+	margin-left: -1vw
 	padding-left: 3.5vw
 	background: $orange
 	li
@@ -388,14 +417,15 @@ $cubic-bezier-out: cubic-bezier(1,0.70,1,0.30)
 			color: $black
 
 .header-actions-list
-	margin-left: 2.4vw
+	margin-left: 3.1vw
 	display: flex
 	align-items: center
 	li
 		margin-bottom: 0
+		margin-right: 1.4vw
+		position: relative
 
 .header-language
-	margin-left: 1vw
 	display: flex
 	align-items: center
 	.link-1
@@ -568,6 +598,194 @@ $cubic-bezier-out: cubic-bezier(1,0.70,1,0.30)
 
 .warehouse
 	margin: 6.5vw 0
+	.product-item
+		height: 47.5vw
+	.product-status
+		right: 2.5vw
+	.product-photo-link
+		height: 35vw
+		padding: 7vw 7vw 1.5vw
+	.product-item-actions
+		top: 2vw
+		left: 2.4vw
+		& > *
+			width: 2.8vw
+			height: 2.8vw
+			svg
+				width: 1.1vw
+
+.catalog
+	margin: 3.5vw 0 16vw
+	&-top
+		margin-bottom: 2vw
+		&-filter
+			display: none
+			justify-content: center
+			margin: 3vw 0
+			&-icon
+				margin-right: 1vw
+				width: 4vw
+			&-title
+				font-family: 'gilroy-bold'
+				font-size: 4vw
+	&-list
+		margin-top: 0.7vw
+		& > div
+			padding-right: 15px
+			padding-left: 15px
+
+.product
+	&-title
+		font-family: 'gilroy-bold'
+		font-size: 1.4vw
+		letter-spacing: 0.06vw
+		text-align: center
+		display: block
+		line-height: 1em
+		color: $black
+	&-status
+		background: $orange
+		color: white
+		position: absolute
+		top: 2.8vw
+		right: 1vw
+		font-size: 1vw
+		padding: 0.2vw 0.6vw
+		font-family: 'gilroy-bold'
+		letter-spacing: 0.05em
+	&-price
+		display: flex
+		align-items: center
+		justify-content: center
+		margin: 1.3vw 0
+		font-size: 1.2vw
+		letter-spacing: 0.1vw
+		.old-price
+			color: #BBBBBB
+			margin-right: 1.4vw
+		.current-price
+			font-family: 'gilroy-bold'
+	&-colors
+		display: none
+		align-items: center
+		margin: 0.4vw 0 1.7vw
+		.label
+			margin-right: 1.2vw
+			&:last-child
+				margin: 0
+	&-delete
+		position: absolute
+		border: 1px solid #202020
+		background: white
+		z-index: 1
+		top: 2.9vw
+		right: 1.2vw
+		width: 2.7vw
+		height: 2.8vw
+		display: flex
+		align-items: center
+		justify-content: center
+		cursor: pointer
+		transition: all 0.3s ease
+		transform: scale(0.5)
+		opacity: 0
+		display: none
+		&:hover
+			background: $orange
+			border-color: $orange
+			svg
+				path
+					fill: white
+		svg
+			width: 1vw
+	&-color
+		width: 1.6vw
+		height: 1.6vw
+		background: #000
+		transition: all 0.3s ease
+		border-radius: 0px
+		-webkit-appearance: none
+		-moz-appearance:    none
+		appearance:         none
+		cursor: pointer
+		&:checked
+			transform: scale(1.4)
+		&.green
+			background: #1DE49C
+		&.orange
+			background: $orange
+		&.black
+			background: $black
+		&.gray
+			background: #BBBBBB
+	&-photo-link
+		height: 26vw
+		padding: 6vw 5vw 1.5vw
+		display: block
+	&-item
+		transition: all 0.3s ease
+		height: 38.5vw
+		margin-bottom: 2vw
+		&:hover
+			background: white
+			box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1)
+			.product-item-actions
+				transform: scale(1)
+				opacity: 1
+			.product-colors
+				display: flex
+			.product-item-info
+				background: white
+				-webkit-box-shadow: 0px 14px 14px 0px rgba(0,0,0,0.1)
+				-moz-box-shadow: 0px 14px 14px 0px rgba(0,0,0,0.1)
+				box-shadow: 0px 14px 14px 0px rgba(0,0,0,0.1)
+			.product-delete
+				opacity: 1
+				transform: scale(1)
+		&-photo
+			position: relative
+		&-actions
+			display: flex
+			position: absolute
+			top: 2.6vw
+			left: 1.1vw
+			transform: scale(0.5)
+			opacity: 0
+			transition: all 0.3s ease
+			& > *
+				background: #FFFFFF
+				box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1)
+				width: 2.2vw
+				height: 2.2vw
+				display: flex
+				align-items: center
+				justify-content: center
+				cursor: pointer
+				transition: all 0.4s ease
+				position: relative
+				margin-right: 0.7vw
+				&:hover
+					background: $orange
+					path
+						fill: white
+				svg
+					width: 0.9vw
+					height: auto
+					position: absolute
+					left: 50%
+					top: 50%
+					transform: translate(-50%, -50%)
+		&-info
+			width: 100%
+			padding: 0 20%
+			margin: 0 auto
+			padding-bottom: 2vw
+			display: flex
+			flex-direction: column
+			align-items: center
+			position: relative
+			z-index: 2
+
 
 .benefits
 	margin: 8.7vw 0 6vw
@@ -892,130 +1110,6 @@ $cubic-bezier-out: cubic-bezier(1,0.70,1,0.30)
 	letter-spacing: 0.28vw
 	line-height: 1em
 
-.product
-	&-title
-		font-family: 'gilroy-bold'
-		font-size: 1.4vw
-		letter-spacing: 0.06vw
-		text-align: center
-		display: block
-		line-height: 1em
-		color: $black
-	&-status
-		background: $orange
-		color: white
-		position: absolute
-		top: 2.8vw
-		right: 2.5vw
-		font-size: 1vw
-		padding: 0.2vw 0.6vw
-		font-family: 'gilroy-bold'
-		letter-spacing: 0.05em
-	&-price
-		display: flex
-		align-items: center
-		justify-content: center
-		margin: 1.3vw 0
-		font-size: 1.2vw
-		letter-spacing: 0.1vw
-		.old-price
-			color: #BBBBBB
-			margin-right: 1.4vw
-		.current-price
-			font-family: 'gilroy-bold'
-	&-colors
-		display: none
-		align-items: center
-		margin: 0.4vw 0 1.7vw
-		.label
-			margin-right: 1.2vw
-			&:last-child
-				margin: 0
-	&-color
-		width: 1.6vw
-		height: 1.6vw
-		background: #000
-		transition: all 0.3s ease
-		border-radius: 0px
-		-webkit-appearance: none
-		-moz-appearance:    none
-		appearance:         none
-		cursor: pointer
-		&:checked
-			transform: scale(1.4)
-		&.green
-			background: #1DE49C
-		&.orange
-			background: $orange
-		&.black
-			background: $black
-		&.gray
-			background: #BBBBBB
-	&-photo-link
-		height: 35vw
-		padding: 7vw 7vw 1.5vw
-		display: block
-	&-item
-		transition: all 0.3s ease
-		height: 47.5vw
-		margin-bottom: 2vw
-		&:hover
-			background: white
-			box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1)
-			.product-item-actions
-				transform: scale(1)
-				opacity: 1
-			.product-colors
-				display: flex
-			.product-item-info
-				background: white
-				-webkit-box-shadow: 0px 14px 14px 0px rgba(0,0,0,0.1)
-				-moz-box-shadow: 0px 14px 14px 0px rgba(0,0,0,0.1)
-				box-shadow: 0px 14px 14px 0px rgba(0,0,0,0.1)
-		&-photo
-			position: relative
-		&-actions
-			display: flex
-			position: absolute
-			top: 2vw
-			left: 2.4vw
-			transform: scale(0.5)
-			opacity: 0
-			transition: all 0.3s ease
-			& > *
-				background: #FFFFFF
-				box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1)
-				width: 2.8vw
-				height: 2.8vw
-				display: flex
-				align-items: center
-				justify-content: center
-				cursor: pointer
-				transition: all 0.4s ease
-				position: relative
-				margin-right: 0.7vw
-				&:hover
-					background: $orange
-					path
-						fill: white
-				svg
-					width: 1.1vw
-					height: auto
-					position: absolute
-					left: 50%
-					top: 50%
-					transform: translate(-50%, -50%)
-		&-info
-			width: 100%
-			padding: 0 20%
-			margin: 0 auto
-			padding-bottom: 2vw
-			display: flex
-			flex-direction: column
-			align-items: center
-			position: relative
-			z-index: 2
-
 
 .blog
 	&-title
@@ -1087,40 +1181,7 @@ $cubic-bezier-out: cubic-bezier(1,0.70,1,0.30)
 					pointer-events: none
 
 
-.catalog
-	margin: 3.5vw 0 16vw
-	&-top
-		margin-bottom: 2vw
-		&-filter
-			display: none
-			justify-content: center
-			margin: 3vw 0
-			&-icon
-				margin-right: 1vw
-				width: 4vw
-			&-title
-				font-family: 'gilroy-bold'
-				font-size: 4vw
-	&-list
-		margin-top: 0.7vw
-		& > div
-			padding-right: 15px
-			padding-left: 15px
-		.product-item
-			height: 38.5vw
-		.product-status
-			right: 1vw
-		.product-photo-link
-			height: 26vw
-			padding: 6vw 5vw 1.5vw
-		.product-item-actions
-			top: 2.6vw
-			left: 1.1vw
-			& > *
-				width: 2.2vw
-				height: 2.2vw
-				svg
-					width: 0.9vw
+
 
 
 .sidebar
@@ -1295,6 +1356,470 @@ $cubic-bezier-out: cubic-bezier(1,0.70,1,0.30)
 			&:hover
 				svg
 					transform: translate(10px, 0px)
+
+
+.about
+	margin: 3.5vw 0 5vw
+	&-top
+		margin-bottom: 2vw
+	&-photo
+		height: 34.3vw
+		width: 99%
+		margin-bottom: 2vw
+		img
+			object-fit: cover
+	&-info
+		display: flex
+		flex-direction: column
+		justify-content: center
+		height: 100%
+		.title-4
+			margin-bottom: 1.5vw
+		.description-2
+			line-height: 1.4em
+			margin-bottom: 1.5vw
+			&:last-child
+				margin-bottom: 0
+	&-welcome
+		margin-bottom: 7vw
+		&-photo
+			position: relative
+			height: 34vw
+			margin-bottom: 2.3vw
+			img
+				object-fit: cover
+			&-info
+				position: absolute
+				left: 0
+				bottom: 0
+				background: #FCFCFC
+				padding: 1.7vw 2vw 1.2vw
+		&-info
+			width: 74%
+			.description-2
+				line-height: 1.37em
+	.benefits-info
+		margin: 4.9vw 0 0.7vw
+		height: auto
+		.title-4
+			text-align: center
+	.benefits-list
+		flex-wrap: nowrap
+		margin-left: 0vw
+		li
+			align-items: flex-start
+			width: 20%
+			flex: 1
+	.benefits-title
+		width: 94%
+		text-align: left
+		margin: 0
+
+.page_about
+	.about-section
+		margin-bottom: 10.5vw
+
+
+.contact
+	margin-top: 3.5vw
+	margin-bottom: 13.7vw
+	&-info
+		background: $orange
+		box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.1)
+		padding: 3.5vw 6.9vw 1vw
+		color: white
+		margin-bottom: 13.5vw
+		.title-3,
+		.title-5,
+		.description-2
+			color: white
+	&--body
+		margin: 2.1vw 0
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		width: 95%
+	&-item
+		margin-bottom: 1.7vw
+		&-list
+			margin-top: 1.4vw
+			li
+				margin-bottom: 0.25vw
+		&:nth-child(1),
+		&:nth-child(4n)
+			width: 25%
+		&:nth-child(2),
+		&:nth-child(5n)
+			width: 30%
+		&:nth-child(3),
+		&:nth-child(6n)
+			width: 30%
+		&:nth-last-child(-n+3)
+			margin-bottom: 0
+	&-form
+		width: 81%
+		margin-top: 1vw
+	&-section-map
+		height: 35.5vw
+		width: 121%
+		margin-top: -6.5vw
+		margin-left: 8vw
+	&-section-mask
+		left: 7.5vw
+		height: 36vw
+		top: -5.5vw
+	&-error
+		background: #EB3939
+		color: white
+		font-family: 'gilroy-bold'
+		width: 71%
+		padding: 0.5vw 1.7vw
+		font-size: 1.1vw
+		letter-spacing: 0.06vw
+		margin: 3vw 0
+	&-wrap
+		&-form
+			margin-top: 1.8vw
+			width: 83%
+
+.form-group
+	display: flex
+	justify-content: space-between
+	.form-label
+		width: 48.5%
+
+.form-label
+	display: flex
+	margin-bottom: 2.2vw
+	position: relative
+	input,
+	textarea
+		border-bottom: 1px solid #BBBBBB
+		width: 100%
+		font-size: 1.2vw
+		padding: 0.95vw 0
+		&:valid
+			border-color: $orange
+		&.error
+			border-color: #EB3939
+	textarea
+		resize: none
+		display: block
+		height: 7.5vw
+
+
+
+.favorite
+	margin: 1vw 0 3vw
+	&.has-products
+		.favorite-status,
+		.favorite-list
+			display: flex !important
+		.favorite-empty
+			display: none
+	&-status
+		display: none
+		align-items: center
+		margin: 2.1vw 0 1.3vw
+		&-clear
+			margin-left: 2.4vw
+			display: flex
+			align-items: center
+			white-space: nowrap
+			cursor: pointer
+			img
+				width: 0.7vw
+				height: 0.7vw
+				margin-left: 0.55vw
+				transform: translate(0px, 1px)
+	&-list
+		display: none !important
+		& > div
+			padding-left: 15px
+			padding-right: 15px
+	&-empty
+		&-info
+			display: flex
+			align-items: center
+			flex-direction: column
+			justify-content: center
+			margin: 3.4vw 0
+		&-icon
+			width: 6vw
+			margin-bottom: 1vw
+		.btn
+			margin-top: 2vw
+			min-width: 18vw
+	.product-delete
+		display: flex
+
+.cooperation
+	margin-top: 3.5vw
+	margin-bottom: 6.8vw
+	h3,
+	title-3
+		margin-bottom: 2.3vw
+	h5,
+	.title-5
+		font-size: 1.4vw
+		letter-spacing: 0.06vw
+		line-height: 1em
+
+	p
+		font-size: 1.1vw
+		letter-spacing: 0.06vw
+		line-height: 1.4em
+		margin-bottom: 1.4vw
+		width: 67%
+	ul
+		margin: 1.6vw 0
+		li
+			padding-left: 1.2vw
+			position: relative
+			&:before
+				position: absolute
+				content: ''
+				width: 0.6vw
+				height: 2px
+				background: #202020
+				left: 0.1vw
+				top: 50%
+	&-form
+		margin-top: 2.1vw
+		.btn
+			padding: 0.8vw 2vw
+			min-width: 14.2vw
+
+.cart
+	position: fixed
+	right: 9.9vw
+	top: 0
+	width: 25.5vw
+	height: 100vh
+	background: white
+	z-index: -1
+	opacity: 0
+	&.has-products
+		.cart-empty
+			display: none
+		.cart-body
+			display: block
+	&.open
+		opacity: 1
+		z-index: 11
+	&-title
+		font-size: 1.1vw
+		letter-spacing: 0.02vw
+		width: 80%
+		display: block
+		line-height: 1em
+	&-description
+		font-size: 0.9vw
+	&-price
+		display: flex
+		margin: 0.7vw 0 0.4vw
+		font-size: 0.9vw
+		span
+			margin-left: 0.2vw
+		.old-price
+			color: #BBBBBB
+			margin-right: 0.5vw
+		.current-price
+			font-family: 'gilroy-bold'
+	&-top
+		background: $orange
+		padding: 1.2vw 1vw
+		.title-5
+			color: white
+			text-align: center
+	&-empty
+		width: 100%
+		padding: 1vw 3.3vw 1vw 2vw
+		margin-top: 1.7vw
+		display: block
+		.description-2
+			font-size: 0.8vw
+			line-height: 1.4em
+	&-body
+		display: none
+		height: 92vh
+		width: 100%
+		padding: 1vw 2vw 1vw 2vw
+		overflow: hidden
+		overflow-y: auto
+	&-item
+		width: 97%
+		padding: 1.5vw 0vw 1.3vw
+		border-bottom: 1px solid #BBBBBB
+		display: flex
+		flex-wrap: wrap
+		margin-bottom: 0.3vw
+		&-body,
+		&-footer
+			display: flex
+			width: 100%
+		&-footer
+			margin-top: 0.5vw
+		&-photo
+			width: 22%
+			min-width: 22%
+			height: 10.3vw
+			margin-left: 5%
+		&-info
+			width: 72%
+			padding-left: 1.5vw
+			position: relative
+		&-count
+			width: 32.5%
+			display: flex
+			justify-content: space-between
+			align-items: center
+			.btn
+				min-width: 1.7vw
+				height: 1.7vw
+				padding: 0
+				border-radius: 50%
+				position: relative
+				span
+					position: absolute
+					left: 50%
+					top: 50%
+					transform: translate(-50%, -50%)
+					height: 0.6vw
+					line-height: 1em
+					display: flex
+					align-items: center
+					justify-content: center
+			&-number
+				font-family: 'gilroy-bold'
+				font-size: 1.1vw
+		&-price
+			width: 67%
+			display: flex
+			flex-direction: column
+			align-items: flex-end
+			.price-current
+				font-family: 'gilroy-bold'
+				font-size: 1.15vw
+				span
+					margin-left: 0.3vw
+					letter-spacing: 0.02vw
+	&-action
+		background: #E4801D
+		color: white
+		font-family: 'gilroy-bold'
+		padding: 0.1vw 0.5vw
+		font-size: 0.8vw
+		margin-bottom: 0.5vw
+	&-color
+		span
+			margin-left: 0.4vw
+			font-family: 'gilroy-bold'
+			letter-spacing: 0.04vw
+	&-delete
+		position: absolute
+		right: 1.5%
+		width: 0.6vw
+		top: 0.6vw
+		cursor: pointer
+		&:hover
+			svg
+				path
+					fill: $orange
+	&-bottom
+		margin-top: 1vw
+		.btn
+			width: 100%
+		&-list
+			margin-bottom: 1.1vw
+			li
+				display: flex
+				justify-content: space-between
+				align-items: center
+				padding: 0.8vw 0
+		.current-price
+			font-family: 'gilroy-bold'
+			font-size: 1.1vw
+			letter-spacing: 0.06vw
+			span
+				margin-left: 0.3vw
+
+
+.checkout
+	margin: 1vw 0
+	&-top
+		margin-bottom: 3.5vw
+	&-form
+		margin-top: 2.4vw
+		&-wrap
+			margin-bottom: 1.5vw
+		&.checkout-address
+			.form-label:first-child
+				width: 66.5%
+			.form-label:last-child
+				width: 31%
+		&.checkout-delivery
+			.form-label
+				cursor: pointer
+			input
+				appearance: none
+				-webkit-appearance: none
+				position: absolute
+				opacity: 0
+				z-index: -1
+
+.delivery
+	&-title
+		width: 80%
+		font-family: 'gilroy-bold'
+		font-size: 1.2vw
+		letter-spacing: 0.015vw
+	&-border
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		border: 1px solid #BBBBBB
+	&-info
+		width: 100%
+		height: 100%
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+		justify-content: center
+		padding: 2vw
+		.description-2
+			margin-top: 1.2vw
+	&-input
+		position: absolute
+		right: 0
+		top: 0
+		height: 100%
+		width: 12%
+		border-left: 1px solid #BBBBBB
+		&-checkmark
+			position: absolute
+			left: 50%
+			top: 50%
+			width: 25px
+			height: 25px
+			border: 1px solid $black
+			border-radius: 50%
+			transform: translate(-50%, -50%)
+			i
+				position: absolute
+				content: ''
+				width: 14px
+				height: 14px
+				background: $orange
+				border-radius: 50%
+				left: 50%
+				top: 50%
+				transform: translate(-50%, -50%)
+
+
+
 
 
 
